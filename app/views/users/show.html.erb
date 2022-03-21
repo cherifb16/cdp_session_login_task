@@ -1,0 +1,8 @@
+<h3>Profile page</h3>
+<p>Email: <%= @user.email %></p>
+
+<br/>
+<%= link_to "edit account", edit_user_path(@user.id) %>
+<%= link_to "delete your account", @user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+

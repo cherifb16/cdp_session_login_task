@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CdpWebRailsSessionLoginTask</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p id="notice"><%= notice %></p>
+    <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+    <%= yield %>
+    <%= link_to "Logout", logout_path, method: :delete, :class => 'navbar-link'  %>
+    <ul class="navbar-nav mr-auto">
+      <a class="nav-link" href="/tasks">Tasks</a>
+  </ul>
+  </body>
+</html>
